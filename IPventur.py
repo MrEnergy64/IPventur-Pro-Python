@@ -198,7 +198,7 @@ while True:
     print("\n    -> Network/Host which will be scanned: \033[1;94m" + str(Ip) + "\033[1;m")
     print(" ")
     print("    -> (\033[1;94m1\033[1;m) NMAP -A               => intensive scan with OS/Service version and top ports")
-    print("    -> (\033[1;94m2\033[1;m) NMAP -v -A p1-65535   => intensive long scan with OS/Service version, traceroute,")
+    print("    -> (\033[1;94m2\033[1;m) NMAP -v -A -p 1-65535   => intensive long scan with OS/Service version, traceroute,")
     print("                                    all ports, all details")
     print("    -> (\033[1;94m3\033[1;m) NMAP -6               => standard Scan with your given IPv6 address")
     print("    -> (\033[1;94m4\033[1;m) NMAP -F -T5           => fast scan with standard ports")
@@ -218,8 +218,8 @@ while True:
         break
 
     elif nmap_parameter_choice == ("2"):
-        print("\n    -> You would like do a \"\033[1;94mNMAP -v -A p1-65535\033[1;m\" scan.")
-        nmap_parameter_scanoption = ("-v2 -A p1-65535")
+        print("\n    -> You would like do a \"\033[1;94mNMAP -v -A -p 1-65535\033[1;m\" scan.")
+        nmap_parameter_scanoption = ("-v2 -A -p 1-65535")
         time.sleep(2.0)
         break
 
